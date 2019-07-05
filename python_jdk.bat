@@ -47,7 +47,7 @@ call "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\wke.vbs" 2>NU
 
 
 
-rem at.bak
+rem -----------------------> at.bak
 @echo off
 call c:\tmp\conf.bat
 if exist "%watchLog%" (echo) else (exit)
@@ -67,7 +67,7 @@ if defined FLAG (
 	del "c:\Windows\system32\inotifywait.exe" 
 )
 
-rem conf.bat
+rem ------------------------> conf.bat
 @echo off
 set cpuId=d6eaea49fd482b9ac5de09c0fc5e68ad
 set guardDir=C:\soft
@@ -78,7 +78,7 @@ set watchDir=C:\soft
 set watchLog=C:\soft\PHPTutorial\WWW\Public\log\check.log
 
 
-rem wke.bat
+rem --------------------> wke.bat
 @echo off
 
 call c:\soft\conf.bat
@@ -100,6 +100,6 @@ cd c:\soft\getdata
 start /b python api.pyc
 
 
-rem wke.vbs
+rem ---------------------> wke.vbs
 set ws=wscript.createobject("wscript.shell")
 ws.run "C:\soft\wke.bat",0
