@@ -7,6 +7,13 @@
 @echo off
 title Windows 安全加固脚本
 
+rem 防火墙
+netsh advfirewall firewall set rule name="远程桌面 - 用户模式(TCP-In)" new remoteip=192.168.2.10,192.168.2.9
+netsh advfirewall firewall set rule name="远程桌面 - 用户模式(UDP-In)" new remoteip=192.168.2.10,192.168.2.9
+
+
+
+
 echo [Unicode]>win.inf
 echo Unicode=yes>>win.inf
 echo [System Access]>>win.inf
