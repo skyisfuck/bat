@@ -27,3 +27,7 @@ if %ERRORLEVEL% == 0 (
 )
 
 :end
+
+##### startMitmdump.vbs
+set ws=wscritpt.createobject("wscript.shell")
+ws.run "D:\test\a\startMitdump.bat",0
